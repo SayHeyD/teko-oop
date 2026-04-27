@@ -2,9 +2,12 @@ package Board;
 
 import Pieces.*;
 
+import java.util.ArrayList;
+
 // Board coordiante system is drawn from top left (0, 0) to bottom right (7, 7)
 public class Chessboard {
     private static final Field[][] fields;
+    private static final ArrayList<Piece> capturedPieces = new ArrayList<>();
 
     static {
         // Generate the chessboard
@@ -48,6 +51,10 @@ public class Chessboard {
 
     public static Field[][] getFields() {
         return fields;
+    }
+
+    public static ArrayList<Piece> getCapturedPieces() {
+        return capturedPieces;
     }
 
     public static Field getField(int x_coord, int y_coord) {

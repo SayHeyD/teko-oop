@@ -1,5 +1,6 @@
 package Pieces;
 
+import Board.Chessboard;
 import Board.Field;
 
 import java.util.Arrays;
@@ -38,10 +39,19 @@ public abstract class Piece {
         return field;
     }
 
+    protected void capture() {
+        Chessboard.getCapturedPieces().add(this);
+    }
+
     public boolean move(Field field) {
         Field[] allowedMoves = getMoves();
 
         if (Arrays.asList(allowedMoves).contains(field)) {
+
+            if (field.getPiece() != null) {
+                field.getPiece().capture();
+            }
+
             getField().setPiece(null);
             field.setPiece(this);
             isFirstMove = false;
