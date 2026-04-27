@@ -2,6 +2,8 @@ package Pieces;
 
 import Board.Field;
 
+import java.util.ArrayList;
+
 public class Queen extends Piece {
     public Queen(Color color) {
         super(color);
@@ -9,12 +11,11 @@ public class Queen extends Piece {
     }
 
     @Override
-    public boolean move(Field field) {
-        return false;
-    }
-
-    @Override
     public Field[] getMoves() {
-        return new Field[0];
+        ArrayList<Field> possibleMoves = new ArrayList<>();
+
+        // TODO: Implement queen's move logic
+
+        return possibleMoves.toArray(new Field[0]);
     }
 }
