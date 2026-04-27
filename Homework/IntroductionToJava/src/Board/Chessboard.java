@@ -4,7 +4,7 @@ import Pieces.*;
 
 import java.util.ArrayList;
 
-// Board coordiante system is drawn from top left (0, 0) to bottom right (7, 7)
+// Board coordinate system is drawn from top left (0, 0) to bottom right (7, 7)
 public class Chessboard {
     private static final Field[][] fields;
     private static final ArrayList<Piece> capturedPieces = new ArrayList<>();
