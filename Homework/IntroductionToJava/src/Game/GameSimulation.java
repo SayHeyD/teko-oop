@@ -64,8 +64,16 @@ public class GameSimulation {
         }
 
         PieceMove selectedMove = allPossibleMoves.get(random.nextInt(allPossibleMoves.size()));
-        System.out.println("Selected move: " + selectedMove.piece.getName() + " to " + 
-                           selectedMove.targetField.getCoordinates()[0] + "," + selectedMove.targetField.getCoordinates()[1]);
+        Piece targetPiece = selectedMove.targetField.getPiece();
+        
+        String moveOutput = "Selected move: " + selectedMove.piece.getName() + " to " + 
+                           selectedMove.targetField.getCoordinates()[0] + "," + selectedMove.targetField.getCoordinates()[1];
+        
+        if (targetPiece != null) {
+            moveOutput += " (Captured " + targetPiece.getColor() + " " + targetPiece.getName() + ")";
+        }
+        
+        System.out.println(moveOutput);
         
         return selectedMove.piece.move(selectedMove.targetField);
     }
