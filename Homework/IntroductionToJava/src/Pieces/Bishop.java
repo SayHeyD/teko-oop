@@ -1,7 +1,7 @@
 package Pieces;
 
-import Board.Chessboard;
 import Board.Field;
+import Pieces.Movements.SlidingMovement;
 
 import java.util.ArrayList;
 

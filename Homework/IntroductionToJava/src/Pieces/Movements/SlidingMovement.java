@@ -1,7 +1,9 @@
-package Pieces;
+package Pieces.Movements;
 
 import Board.Chessboard;
 import Board.Field;
+import Pieces.Piece;
+
 import java.util.List;
 
 public interface SlidingMovement {
