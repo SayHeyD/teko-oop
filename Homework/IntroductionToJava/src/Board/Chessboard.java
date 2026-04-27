@@ -94,4 +94,11 @@ public class Chessboard {
 
         return String.join("\n", rows);
     }
+
+    public static void finishGame(Color winner) {
+        System.out.println(output());
+        System.out.println();
+        System.out.printf("Game over! %s won!%n", winner);
+        System.exit(0);
+    }
 }

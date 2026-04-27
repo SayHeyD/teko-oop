@@ -40,6 +40,10 @@ public abstract class Piece {
     }
 
     protected void capture() {
+        if (this.getClass() == King.class) {
+            Chessboard.finishGame(getColor());
+        }
+
         Chessboard.getCapturedPieces().add(this);
     }
 
