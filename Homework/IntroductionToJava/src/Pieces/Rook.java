@@ -14,11 +14,6 @@ public class Rook extends Piece {
     }
 
     @Override
-    public boolean move(Field field) {
-        return false;
-    }
-
-    @Override
     public Field[] getMoves() {
         ArrayList<Field> possibleMoves = new ArrayList<>();
 
