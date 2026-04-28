@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Homework/01_IntroductionToJava/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homework/02_IntroductionOop/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Homework/03_RelationshipsBetweenClassesAndObjects1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Homework/04_RelationshipsBetweenClassesAndObjects2/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
