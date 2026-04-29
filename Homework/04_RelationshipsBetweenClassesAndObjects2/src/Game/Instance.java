@@ -52,7 +52,7 @@ public class Instance {
                 """
                 You fall back into a deep slumber...
                 
-                The mysterious man is quite annoyed by this. He stabs you in your sleep and you die.
+                The mysterious man is quite annoyed by this. He stabs you in your sleep.
                 """;
 
         Choice die = new ChoiceBuilder()

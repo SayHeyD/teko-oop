@@ -56,6 +56,7 @@ public class Node implements NodeTreeItem {
         int choice = 0;
 
         if (isMandatoryChoice()) {
+            System.out.println(choices[0].getPrompt());
             return choices[0];
         }
 
