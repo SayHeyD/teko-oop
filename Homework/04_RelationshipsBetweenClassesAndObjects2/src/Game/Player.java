@@ -66,4 +66,8 @@ public class Player {
     public static void die() {
         setHealth(0);
     }
+
+    public static String getStats() {
+        return String.format("Health: %d, Coin: %d, Attack Damage: %d", health, coin, damage);
+    }
 }

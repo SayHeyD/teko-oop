@@ -1,5 +1,7 @@
 package Activity;
 
+import Game.Player;
+
 import java.util.Scanner;
 
 public class Node implements NodeTreeItem {
@@ -83,6 +85,8 @@ public class Node implements NodeTreeItem {
     }
 
     public void execute() {
+        System.out.println(Player.getStats());
+        System.out.println();
         System.out.println(prompt);
         System.out.println();
         Choice choice = receiveChoice();
