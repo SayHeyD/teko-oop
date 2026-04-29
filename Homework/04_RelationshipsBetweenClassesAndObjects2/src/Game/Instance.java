@@ -38,6 +38,7 @@ public class Instance {
 
         return new NodeBuilder()
                 .setPrompt("Mysterious man: \"Wake up adventurer, it's time to find some treasure!\"")
+                .addChoice(getUp)
                 .addChoice(stayInBed)
                 .build();
     }
