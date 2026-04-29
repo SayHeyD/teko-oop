@@ -1,5 +1,7 @@
 package Activity;
 
+import java.util.Scanner;
+
 public class Node implements NodeTreeItem {
     private Node parent;
     private Choice[] choices;
@@ -25,6 +27,11 @@ public class Node implements NodeTreeItem {
     }
 
     public Choice[] getChoices() {
+
+        if (choices == null) {
+            return new Choice[0];
+        }
+
         return choices;
     }
 
@@ -39,7 +46,8 @@ public class Node implements NodeTreeItem {
 
             System.out.print("Enter your choice: ");
 
-            String input = System.console().readLine();
+            Scanner inputScanner = new Scanner(System.in);
+            String input = inputScanner.nextLine();
 
             try {
                 choice = Integer.parseInt(input);
