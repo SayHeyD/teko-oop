@@ -28,6 +28,15 @@ public class NodeBuilder implements Builder {
         return this;
     }
 
+    public NodeBuilder setIsMandatoryChoice() {
+        return setIsMandatoryChoice(true);
+    }
+
+    public NodeBuilder setIsMandatoryChoice(boolean mandatoryChoice) {
+        node.setIsMandatoryChoice(mandatoryChoice);
+        return this;
+    }
+
     public Node build() {
         return node;
     }

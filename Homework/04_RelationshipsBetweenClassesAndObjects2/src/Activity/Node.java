@@ -6,7 +6,7 @@ public class Node implements NodeTreeItem {
     private Node parent;
     private Choice[] choices;
     private String prompt;
-    // TODO: implement mandatory choices with custom actions
+    private boolean mandatoryChoice = false;
 
     protected Node() {}
 
@@ -18,7 +18,23 @@ public class Node implements NodeTreeItem {
         return parent;
     }
 
+    protected void setIsMandatoryChoice(boolean mandatoryChoice) {
+        if (choices != null && choices.length > 1 && mandatoryChoice) {
+            throw new IllegalStateException("Mandatory nodes cannot have more than one choice.");
+        }
+
+        this.mandatoryChoice = mandatoryChoice;
+    }
+
+    public boolean isMandatoryChoice() {
+        return mandatoryChoice;
+    }
+
     protected void setChoices(Choice[] choices) {
+        if (isMandatoryChoice() && choices.length > 1) {
+            throw new IllegalStateException("Mandatory nodes cannot have more than one choice.");
+        }
+
         this.choices = choices;
     }
 
@@ -38,6 +54,10 @@ public class Node implements NodeTreeItem {
     private Choice receiveChoice() {
         boolean awaitingValidChoice = true;
         int choice = 0;
+
+        if (isMandatoryChoice()) {
+            return choices[0];
+        }
 
         do {
             for(int i = 0; i < choices.length; i++) {
