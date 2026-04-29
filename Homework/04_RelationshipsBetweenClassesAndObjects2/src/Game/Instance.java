@@ -19,6 +19,8 @@ public class Instance {
 
     public static void end() {
         isRunning = false;
+        System.out.println();
+        System.out.println("=======================================");
         System.out.println("Game has ended");
     }
 
