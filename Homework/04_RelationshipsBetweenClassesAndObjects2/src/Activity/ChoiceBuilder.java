@@ -17,6 +17,11 @@ public class ChoiceBuilder implements Builder {
         return this;
     }
 
+    public ChoiceBuilder setAction(Runnable action) {
+        choice.setAction(action);
+        return this;
+    }
+
     public Choice build() {
         return choice;
     }

@@ -3,7 +3,7 @@ package Activity;
 public class Choice implements NodeTreeItem {
     private Node nextNode;
     private String prompt;
-    // TODO: implement custom actions for choices
+    private Runnable action;
 
     public Choice() {}
 
@@ -13,6 +13,10 @@ public class Choice implements NodeTreeItem {
 
     protected void setNextNode(Node nextNode) {
         this.nextNode = nextNode;
+    }
+
+    protected void setAction(Runnable action) {
+        this.action = action;
     }
 
     protected Node getNextNode() {
@@ -28,6 +32,12 @@ public class Choice implements NodeTreeItem {
     }
 
     public void pick() {
-        nextNode.execute();
+        if (action != null) {
+            action.run();
+        }
+
+        if (nextNode != null) {
+            nextNode.execute();
+        }
     }
 }
