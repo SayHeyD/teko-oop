@@ -62,7 +62,7 @@ public class Node implements NodeTreeItem {
 
         do {
             for(int i = 0; i < choices.length; i++) {
-                System.out.printf("%d. - %s\n", i + 1, choices[0].getPrompt());
+                System.out.printf("%d. - %s\n", i + 1, choices[i].getPrompt());
             }
 
             System.out.print("Enter your choice: ");
