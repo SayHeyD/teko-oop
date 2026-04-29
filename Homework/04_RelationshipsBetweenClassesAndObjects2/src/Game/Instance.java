@@ -26,7 +26,7 @@ public class Instance {
 
         Choice getUp = new ChoiceBuilder()
                 .setPrompt("Get up and explore the world!")
-                .setNextNode(getExploreNode())
+                .setNextNode(getUpNode())
                 .build();
 
         Choice stayInBed = new ChoiceBuilder()
@@ -34,22 +34,36 @@ public class Instance {
                 .setNextNode(getStayInBedNode())
                 .build();
 
-        Node start = new NodeBuilder()
+        return new NodeBuilder()
                 .setPrompt("Mysterious man: \"Wake up adventurer, it's time to find some treasure!\"")
                 .addChoice(stayInBed)
                 .build();
+    }
 
-        return start;
+    private static Node getUpNode() {
+        return new NodeBuilder()
+                .setPrompt("You are standing on the ground. You can't see anything.")
+                .build();
     }
 
     private static Node getStayInBedNode() {
-        StringBuilder prompt = new StringBuilder("You fall back into a deep slumber...\n");
 
-        prompt.append("\n");
-        prompt.append("The mysterious man is quite annoyed by this. He stabs you in your sleep and you die.");
+        String prompt =
+                """
+                You fall back into a deep slumber...
+                
+                The mysterious man is quite annoyed by this. He stabs you in your sleep and you die.
+                """;
+
+        Choice die = new ChoiceBuilder()
+                .setPrompt("You die")
+                .setAction(() -> { Player.die(); Instance.end(); })
+                .build();
 
         return new NodeBuilder()
-                .setPrompt(prompt.toString())
+                .setPrompt(prompt)
+                .setIsMandatoryChoice()
+                .addChoice(die)
                 .build();
     }
 }
