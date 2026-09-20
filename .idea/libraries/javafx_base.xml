@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="javafx.base">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Homework/14_GUI/deps/javafx.base.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Homework/14_GUI/deps/javafx.controls.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Homework/14_GUI/deps/javafx.fxml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Homework/14_GUI/deps/javafx.graphics.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Homework/14_GUI/deps/javafx.media.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Homework/14_GUI/deps/javafx.swing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Homework/14_GUI/deps/javafx.web.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Homework/14_GUI/deps/javafx-swt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Homework/14_GUI/deps/jdk.jsobject.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Homework/14_GUI/deps/jfx.incubator.input.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Homework/14_GUI/deps/jfx.incubator.richtext.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
