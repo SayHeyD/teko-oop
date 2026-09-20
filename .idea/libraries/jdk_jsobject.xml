@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jdk.jsobject">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Homework/14_GUI/deps/jdk.jsobject.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
